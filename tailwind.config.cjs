@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
-        ShadowsIntoLight: ["Shadows Into Light", "sans-serif"],
+        shadowsintolight: ["Shadows Into Light", "sans-serif"],
       },
     },
   },
