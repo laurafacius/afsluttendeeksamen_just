@@ -4,10 +4,10 @@ module.exports = {
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
   theme: {
     screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-      xl: "1440px",
+      mobile: "480px",
+      tablet: "768px",
+      laptop: "976px",
+      desktop: "1440px",
     },
     colors: {
       transparent: "transparent",
