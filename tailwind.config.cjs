@@ -14,6 +14,7 @@ module.exports = {
       current: "currentColor",
       wine: "#6E1E3A",
       rose: "#CDA7B2",
+      lightrose: "#FFF8F8",
       darkgrey: "#2F3642",
       white: "#ffffff",
       black: "#000000",
@@ -22,6 +23,7 @@ module.exports = {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         shadowsintolight: ["Shadows Into Light", "sans-serif"],
+        lora: ["Lora", "sans-serif"],
       },
     },
   },
