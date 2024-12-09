@@ -1,29 +1,76 @@
-<header>
-<!-- Navigation-1 -->
- <div x-data="{ showmenu: false }" class="p-4 fixed top-0 left-0 w-full bg-white laptop:bg-transparent md:hover:bg-white transition-colors duration-300 z-50 group">
-    <div id="navbar" class="flex flex-row justify-between">
-        <div id="logo" class="z-10">
-            <a href="/"><img src="/dn_logo2.svg" alt="logo" class="h-10 w-20 mr-2 md:h-20 md:w-28 md:ml-5"></a>
-        </div>
-        <nav id="desktopmenu" class="hidden lg:block z-10 text-black font-Lato pt-8 pr-5">
-            <ul class="flex flex-row gap-14">
-                <li class="group-hover:text-blå500"><a href="/listview">BUKKETTER</a></li>
-                <li class="group-hover:text-blå500"><a href="/omos">LIVETS BEGIVENHEDER</a></li>
-                <li class="group-hover:text-blå500"><a href="/">KONTAKT</a></li>
-                <li class="group-hover:text-blå500"><a href="/">OM OS</a></li>
-                <li class="group-hover:text-blå500"><a href="/">CLICK & COLLECT</a></li>   
-        </nav>
-        <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu" class="">Menu</button>
+<!-- Dark Grey Banner -->
+<div class="bg-darkgrey text-white text-sm py-2">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <p>Din lokale blomsterforhandler</p>
+    <div class="flex space-x-4">
+      <span>Bæredygtigt & Unikt Udvalg</span>
+      <a href="/click-collect" class="hover:underline">Click & Collect Service</a>
     </div>
-    <nav id="mobilmenu" class=" z-10 flex flex-col content-center pt-4" 
-    x-show="showmenu" x-transition x-on:click="showmenu = false" x-on:click.outside="showmenu = false">
-        <ul >
-            <li class="text-center text-blå500 font-Lato py-2 border-y-2 group-hover:text-blue"><a href="/listview">BUKKETTER</a></li>
-            <li class="text-center text-blå500 font-Lato py-2 border-y-2 group-hover:text-blue"><a href="/omos">LIVETS BEGIVENHEDER</a></li>
-            <li class="text-center text-blå500 font-Lato py-2 border-y-2 group-hover:text-blue"><a href="/">KONTAKT</a></li>
-            <li class="text-center text-blå500 font-Lato py-2 border-y-2 group-hover:text-blue"><a href="/">OM OS</a></li>
-            <li class="text-center text-blå500 font-Lato py-2 border-y-2 group-hover:text-blue"><a href="/">CLICK & COLLECT</a></li>
-        </ul>
-    </nav>
+  </div>
 </div>
+
+<!-- Main Header -->
+<header class="bg-white border-b border-rose">
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="text-wine font-shadowsintolight text-xl">Just</a>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden laptop:flex space-x-6 items-center">
+      <a href="/buketter" class="text-darkgrey hover:text-wine">BUKETTER</a>
+      <a href="/livets-begivenheder" class="text-darkgrey hover:text-wine">LIVETS BEGIVENHEDER</a>
+      <a href="/om-os" class="text-darkgrey hover:text-wine">OM OS</a>
+      <a href="/kontakt" class="text-darkgrey hover:text-wine">KONTAKT</a>
+      <a href="/click-collect" class="text-darkgrey hover:text-wine">CLICK & COLLECT</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button
+      class="laptop:hidden text-darkgrey focus:outline-none"
+      id="menu-toggle"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <nav
+    class="hidden laptop:hidden bg-white border-t border-rose"
+    id="mobile-menu"
+  >
+    <div class="flex flex-col space-y-4 px-4 py-2">
+      <a href="/buketter" class="text-darkgrey hover:text-wine">BUKETTER</a>
+      <a href="/livets-begivenheder" class="text-darkgrey hover:text-wine">
+        LIVETS BEGIVENHEDER
+      </a>
+      <a href="/om-os" class="text-darkgrey hover:text-wine">OM OS</a>
+      <a href="/kontakt" class="text-darkgrey hover:text-wine">KONTAKT</a>
+      <a href="/click-collect" class="text-darkgrey hover:text-wine">
+        CLICK & COLLECT
+      </a>
+    </div>
+  </nav>
 </header>
+
+<script>
+  // Toggle the visibility of the mobile menu
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
