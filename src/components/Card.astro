@@ -1,0 +1,24 @@
+---
+const props = Astro.props;
+import Button from "../components/Button.astro"
+---
+<article class="grid grid-cols-1">
+
+<div>
+    <slot/>
+</div>
+
+<div class="flex flex-col bg-white overflow-hidden">
+
+  <div class="p-4 text-left">
+    <h2 class="text-2xl text-black font-montserrat">{props.title}</h2>
+    <p class="text-base text-black mt-2 font-montserrat font-light">{props.description}</p>
+    <p class="text-xl font-bold text-black mt-3 font-montserrat">{props.price} DKK</p>
+  </div>
+
+  <div class="flex flex-row justify-between items-center gap-2 mt-4 p-4">
+    <a href="/singleview"><Button variant="secondary" size="large">LÆS MERE</Button></a>
+    <a href="/singleview"><Button variant="tertiary" size="large">CLICK & COLLECT</Button></a>
+  </div>
+</div>
+</article>
