@@ -1,6 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Infografik from '../components/Infografik.astro';
+import Omos_sektion from '../components/Omos_sektion.astro';
+import Click_sektion from '../components/Click_sektion.astro';
+import Some_sektion from '../components/Some_sektion.astro';
 ---
 <MainLayout title="Forside">
   <!-- Hero-Unit -->
@@ -24,4 +28,9 @@ import Button from '../components/Button.astro';
       </div>
     </div>
   </section>
+  <Infografik></Infografik>
+  <h2>Populære Buketter</h2>
+  <Omos_sektion></Omos_sektion>
+  <Click_sektion></Click_sektion>
+  <Some_sektion></Some_sektion>
 </MainLayout>
