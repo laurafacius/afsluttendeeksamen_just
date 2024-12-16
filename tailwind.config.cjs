@@ -18,6 +18,9 @@ module.exports = {
       darkgrey: "#2F3642",
       white: "#ffffff",
       black: "#000000",
+      winedark: "#6E1E3A",
+      lightgray: "#f3f4f6",
+      buttonhover: "#5A1631",
     },
     extend: {
       fontFamily: {
