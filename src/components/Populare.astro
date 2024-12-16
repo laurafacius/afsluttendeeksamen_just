@@ -1,0 +1,31 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from '../components/Button.astro';
+import Anbefaling from "../components/Anbefaling.astro";
+import Card from "../components/Card.astro";
+---
+<h2 class="text-center text-wine font-lora mobile:text-2xl laptop:text-5xl laptop:pt-8">Populære Buketter</h2>
+<section class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 p-4 mobile:p-6 tablet:p-8 laptop:p-16 laptop:pt-8 gap-6">
+  <Card 
+  title="Lys Luftig Buket (Høj)" 
+  description="En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk." 
+  price="349">	
+    <img src="/lysluftigbuket.webp" alt="Buket billede">
+  </Card>
+
+
+  <Card 
+  title="Stor Farverig Buket (Høj)" 
+  description="En imponerende høj buket fyldt med farverige blomster, der lyser rummet op" 
+  price="499">
+	<img src="/storfarverigbuket.webp" alt="Buket billede">
+  </Card>
+
+  <Card 
+  title="Stor Farverig Buket (Lav)" 
+  description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
+  price="399">
+	<img src="/lavfarverigbuket.webp" alt="Buket billede">
+  </Card>
+
+</section>
