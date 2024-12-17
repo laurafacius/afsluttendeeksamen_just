@@ -2,6 +2,8 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import Button from "../../components/Button.astro";
 import { getBuketData, getAllBuketterSlugs } from "../../data/buketData.js";
+import Infografik from "../../components/Infografik.astro";
+import Populare from "../../components/Populare.astro";
 
 // Hent slug fra ruten
 const { slug } = Astro.params;
@@ -31,13 +33,15 @@ export async function getStaticPaths() {
     />
 
       <div class="space-y-4">
-      <h1 class="font-bold mobile:text-4xl laptop:text-6xl font-montserrat mb-4 pt-16">{buket.title}</h1>
-      <p class="text-2xl font-bold text-black">{buket.price}</p>
-      <p class="mobile:text-lg laptop:text-xl font-montserrat">{buket.longDescription}</p>
-      <a href="/singleview"><Button variant="primary" size="large">CLICK & COLLECT</Button></a>
+      <h2 class="font-bold mobile:text-4xl laptop:text-5xl font-montserrat mb-4 pt-16">{buket.title}</h2>
+      <p class="text-2xl font-bold text-black">{buket.price}  DKK</p>
+      <p class="mobile:text-lg laptop:text-xl font-montserrat pb-20 mt-4 mb-4">{buket.longDescription}</p>
+      <a href="/click_collect"><Button variant="primary" size="large">CLICK & COLLECT</Button></a>
 
-      <h2 class="mobile:text-lg laptop:text-2xl font-montserrat">Sådan fungerer Click & Collect</h2>
-      <ol class="mobile:text-lg laptop:text-xl font-montserrat">
+      <hr class="separator text-rose">
+
+      <h3 class="mobile:text-lg laptop:text-2xl font-montserrat">Sådan fungerer Click & Collect</h3>
+      <ol class="mobile:text-lg laptop:text-xl font-montserrat list-decimal">
       <li><strong>Bestil online:</strong> Vælg din favoritbuket eller plante, og gennemfør din bestilling direkte på hjemmesiden.</li>
       <br>
       <li><strong>Afhent i butikken:</strong> Din ordre bliver gjort klar af vores florist og kan hentes samme dag eller på et tidspunkt, der passer dig bedst.</li>
@@ -47,5 +51,6 @@ export async function getStaticPaths() {
     </div>
   </section>
 
-
+<Infografik></Infografik>
+<Populare></Populare>
 </MainLayout>
