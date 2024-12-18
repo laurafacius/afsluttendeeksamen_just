@@ -6,22 +6,22 @@ import Button from "../components/Button.astro"
 <section class="laptop:grid grid-cols-2 font-montserrat bg-gradient-to-r from-rose to-white">
     
     <!-- Billede -->
-    <div class="laptop:px-0 flex items-center justify-end">
-        <img src="/some.png" alt="Mobil skærm af some på tlf">
+    <div class="laptop:px-0 flex items-center laptop:justify-end mobile:justify-center">
+        <img class="mobile:h-80 laptop:h-full" src="/some.png" alt="Mobil skærm af some på tlf">
     </div>
     
     <!-- Tekst -->
     <div class="mobile:py-6 laptop:pt-32 mobile:px-4 laptop:px-16">
-        <h2 class="font-lora text-wine mobile:text-2xl laptop:text-5xl mb-4">Følg os på Sociale Medier</h2>
-        <p class="mobile:mb-4 laptop:mb-6">Blomsterglæde stopper aldrig ved butikken. På vores sociale medier deler vi inspiration, unikke buketter og de små øjeblikke, der bringer blomster til live. Følg med for kreative idéer, nyheder og et kig ind i vores verden, hvor hver buket fortæller sin egen historie.
+        <h2 class="font-lora text-wine mobile:text-3xl laptop:text-5xl mb-4">Følg vores SoMe</h2>
+        <p class="mobile:mb-4 laptop:mb-6 mobile:text-sm laptop:text-base">Blomsterglæde stopper aldrig ved butikken. På vores sociale medier deler vi inspiration, unikke buketter og de små øjeblikke, der bringer blomster til live. Følg med for kreative idéer, nyheder og et kig ind i vores verden, hvor hver buket fortæller sin egen historie.
 </p>
-        <p class="mobile:mb-4 laptop:mb-6">
+        <p class="mobile:mb-4 laptop:mb-6 mobile:text-sm laptop:text-base">
 Find os på Instagram og Facebook – og bliv en del af vores blomsterunivers! </p>
         
     <!-- Knap -->
-    <div class="grid grid-cols-1 gap-2">
-     <a href="/singleview"><Button variant="tertiary" size="large">Følg os på Facebook.</Button></a>
-     <a href="/singleview"><Button variant="tertiary" size="large">Følg os på Instagram</Button></a>
+    <div>
+     <a href="/singleview"><Button variant="tertiary" size="medium">Følg os på Facebook.</Button></a>
+     <a href="/singleview"><Button variant="tertiary" size="medium">Følg os på Instagram</Button></a>
      </div>
     </div>
 </section>

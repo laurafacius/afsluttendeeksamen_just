@@ -4,9 +4,9 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Bekræft & Betalt">
-<section class="bg-rose text-white text-left relative w-full h-[400px] p-4 mobile:p-10 tablet:p-8 laptop:p-16">
-    <h1 class="text-center font-bold mobile:text-4xl laptop:text-6xl font-montserrat mb-4 pt-8">Bekræft & Betal</h1>
-    <p class="text-center mobile:text-lg laptop:text-xl font-montserrat laptop:mx-52">Bekræft dine ordre og oplysninger er korrekte og gå derefter videre til betalingen</p>
+<section class="bg-rose text-white text-left relative w-full mobile:h-[300px] laptop:h-[400px] p-4 mobile:p-10 tablet:p-8 laptop:p-16">
+    <h1 class="text-center font-bold mobile:text-4xl laptop:text-6xl font-montserrat mb-4 mobile:pt-2 laptop:pt-8">Bekræft & Betal</h1>
+    <p class="text-center mobile:text-base laptop:text-xl font-montserrat laptop:mx-52">Bekræft dine ordre og oplysninger er korrekte og gå derefter videre til betalingen</p>
 </section>
 
 <section class="w-full max-w-7-xl mobile:p-7 laptop:p-28">
@@ -14,13 +14,13 @@ import Button from '../components/Button.astro';
 <!-- Din Ordre -->
 <section>
 <div>
- <h3 class="text-2xl font-semibold mb-4 text-darkgrey">Din Ordre:</h3>
+ <h3 class="text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Din Ordre:</h3>
 </div>
 <div class="grid grid-cols-2">
 <div>
-    <p class="text-2xl text-black font-montserrat">Lys Luftig Buket (Høj)</p>
-    <p class="text-base text-black mt-2 font-montserrat font-light">En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk.</p>
-    <p class="text-xl font-bold text-black mt-3 font-montserrat">349 DKK</p>
+    <p class="mobile:text-lg text-2xl text-black font-montserrat">Lys Luftig Buket (Høj)</p>
+    <p class="laptop:text-base mobile:text-xs text-black mt-2 font-montserrat font-light">En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk.</p>
+    <p class="text-sm font-bold text-black mt-3 font-montserrat">349 DKK</p>
 </div>
 
     <div class="flex flex-col laptop:items-end mobile:items-center"><img class="mobile:h-40 laptop:h-36" src="/lysluftigbuket.webp" alt="lys luftig buket"></div>
@@ -30,9 +30,9 @@ import Button from '../components/Button.astro';
 <section class="pt-10">
 <div class="grid grid-cols-2">
 <div>
-    <p class="text-2xl text-black font-montserrat">Lys Luftig Buket (Høj)</p>
-    <p class="text-base text-black mt-2 font-montserrat font-light">En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk.</p>
-    <p class="text-xl font-bold text-black mt-3 font-montserrat">349 DKK</p>
+    <p class="mobile:text-lg text-2xl text-black font-montserrat">Lys Luftig Buket (Høj)</p>
+    <p class="laptop:text-base mobile:text-xs text-black mt-2 font-montserrat font-light">En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk.</p>
+    <p class="text-sm font-bold text-black mt-3 font-montserrat">349 DKK</p>
 </div>
 
     <div class="flex flex-col laptop:items-end mobile:items-center"><img class="mobile:h-40 laptop:h-36" src="/lysluftigbuket.webp" alt="lys luftig buket"></div>
@@ -48,11 +48,11 @@ import Button from '../components/Button.astro';
   </section>
 
 <!-- Afhentningstidspunkt -->
-  <h3 class="pt-6 text-2xl font-semibold mb-4 text-darkgrey">Afheningstidspunkt:</h3>
+  <h3 class="pt-6 text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Afheningstidspunkt:</h3>
   <p class="text-base text-black mt-2 font-montserrat font-light pb-6">14. December, Kl. 12:15</p>
 <hr>
 <!-- Oplsyninger -->
- <h3 class="pt-6 text-2xl font-semibold mb-4 text-darkgrey">Oplysninger:</h3>
+ <h3 class="pt-6 text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Oplysninger:</h3>
   <p class="text-base text-black mt-2 font-montserrat font-light">Jens Jensen</p>
     <p class="text-base text-black mt-2 font-montserrat font-light">eksempel@eksempel.dk</p>
       <p class="text-base text-black mt-2 font-montserrat font-light pb-6">12 34 56 78</p>

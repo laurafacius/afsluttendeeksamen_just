@@ -4,27 +4,27 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Click & Collect">
-<section class="bg-rose text-white text-left relative w-full h-[400px] p-4 mobile:p-10 tablet:p-8 laptop:p-16">
-    <h1 class="text-center font-bold mobile:text-4xl laptop:text-6xl font-montserrat mb-4 pt-8">Click & Collect</h1>
-    <p class="text-center mobile:text-lg laptop:text-xl font-montserrat laptop:mx-52">Velkommen til vores Click & Collect service. Her kan du nemt bestille dine yndlingsbuketter og hente dem, når det passer dig! Følg blot trinene herunder:</p>
+<section class="bg-rose text-white text-left relative w-full mobile:h-[300px] laptop:h-[400px] p-4 mobile:p-10 tablet:p-8 laptop:p-16">
+    <h1 class="text-center font-bold mobile:text-4xl laptop:text-6xl font-montserrat mb-4 mobile:pt-2 laptop:pt-8">Click & Collect</h1>
+    <p class="text-center mobile:text-base laptop:text-xl font-montserrat laptop:mx-52">Velkommen til vores Click & Collect service. Her kan du nemt bestille dine yndlingsbuketter og hente dem, når det passer dig! Følg blot trinene herunder:</p>
 </section>
 
-<section class="laptop:grid grid-cols-4 mobile:pt-10 laptop:py-12">
+<section class="laptop:grid laptop:grid-cols-4 gap-7 mobile:pt-10 laptop:py-12 mobile:grid grid-cols-2">
     <div class="flex flex-col items-center">
-        <img src="/pick.png" alt="klik på buket">
-        <h3 class="mobile:text-xl font-bold laptop:text-2xl mb-2 text-center">Vælg Buket</h3>
+        <img class="mobile:h-48" src="/pick.png" alt="klik på buket">
+        <h3 class="mobile:text-lg font-bold laptop:text-2xl mb-2 text-center">Vælg din Buket</h3>
     </div>
      <div class="flex flex-col items-center">
-        <img src="/info.png" alt="indtast info grafik">
-        <h3 class="mobile:text-xl font-bold laptop:text-2xl mb-2 text-center">Intast oplysninger og Vælg afhentningstidspunkt</h3>
+        <img class="mobile:h-48" src="/info.png" alt="indtast info grafik">
+        <h3 class="mobile:text-lg font-bold laptop:text-2xl mb-2 text-center">Oplysninger & Ahentningstidspunkt</h3>
     </div>
      <div class="flex flex-col items-center">
-        <img src="/bekraft.png" alt="bekræftelse af ordre">
-        <h3 class="mobile:text-xl font-bold laptop:text-2xl mb-2 text-center">Bekræft Oplysninger og Betal</h3>
+        <img class="mobile:h-48" src="/bekraft.png" alt="bekræftelse af ordre">
+        <h3 class="mobile:text-lg font-bold laptop:text-2xl mb-2 text-center">Bekræft Oplysninger og Betal</h3>
     </div>
      <div class="flex flex-col items-center">
-        <img src="/pick_up.png" alt="hent buket i butik">
-        <h3 class="mobile:text-xl font-bold laptop:text-2xl mb-2 text-center">Afhent din ordre i butikken</h3>
+        <img class="mobile:h-48" src="/pick_up.png" alt="hent buket i butik">
+        <h3 class="mobile:text-lg font-bold laptop:text-2xl mb-2 text-center">Afhent Ordre i Butik</h3>
     </div>
 </section>
 	<div class="mobile:pb-14 pt-6 laptop:pb-10 flex flex-col items-center">   <a href="/valg_buket"><Button variant="primary" size="large">VÆLG BUKET</Button></a></div>

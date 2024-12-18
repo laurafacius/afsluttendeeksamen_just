@@ -9,28 +9,35 @@ import Click_sektion from '../components/Click_sektion.astro';
 import Some_sektion from '../components/Some_sektion.astro';
 ---
 <MainLayout title="Forside">
+
   <!-- Hero-Unit -->
-  <section class="relative">
+  <section class="relative h-screen"> <!-- Brug h-screen for at få billedet til at fylde hele skærmen -->
     <!-- Hero-Billede -->
-    <div class="bg-cover bg-center">
-      <img src="/hero_billede.webp" alt="blomster der hænger nedaf" class="w-full h-auto">
+    <div class="bg-cover bg-center w-full h-full"> <!-- Sørg for at billedet dækker hele skærmen -->
+      <img src="/hero_billede.webp" alt="blomster der hænger nedaf" class="w-full h-full object-cover"> <!-- Brug h-full for at sikre, at billedet dækker hele containeren -->
     </div>
 
     <!-- Tekst ovenpå billedet -->
-    <div class="absolute inset-0 flex items-center">
-      <div class="container mx-auto text-center laptop:text-left laptop:mt-48">
+    <div class="absolute inset-0 flex items-center justify-center laptop:items-start laptop:mt-48">
+      <div class="container mx-auto text-center laptop:text-left">
         <div class="text-wine">
-          <h1 class="font-montserrat mobile:text-4xl font-bold laptop:text-6xl">
+          <h1 class="font-montserrat mobile:text-3xl mobile:pt-24 font-bold laptop:text-6xl">
             Blomsterbutikken Just
           </h1>
-          <h2 class="font-shadowsintolight mobile:text-2xl laptop:text-4xl mt-4">
+          <h2 class="font-shadowsintolight mobile:text-2xl mobile:mt-0 laptop:text-4xl laptop:mt-4">
             Smukt, bæredygtigt og helt unikt
           </h2>
         </div>
-		<div class="laptop:pt-6">   <a href="/singleview"><Button variant="primary" size="large">SE BUKETTER</Button></a></div>
+        <div class="mobile:pt-10 laptop:pt-6">   
+          <a href="/listview">
+            <Button variant="primary" size="large">Se vores Buketter</Button>
+          </a>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Resten af sektionerne -->
   <Infografik></Infografik>
   <Populare></Populare>
   <Omos_sektion></Omos_sektion>

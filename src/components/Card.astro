@@ -3,22 +3,21 @@ const props = Astro.props;
 import Button from "../components/Button.astro"
 ---
 <article class="grid grid-cols-1">
-
-<div>
+  <div>
     <slot/>
-</div>
-
-<div class="flex flex-col bg-white overflow-hidden">
-
-  <div class="p-4 text-left">
-    <h2 class="text-2xl text-black font-montserrat">{props.title}</h2>
-    <p class="text-base text-black mt-2 font-montserrat font-light">{props.description}</p>
-    <p class="text-xl font-bold text-black mt-3 font-montserrat">{props.price} DKK</p>
   </div>
 
-  <div class="flex flex-row justify-between items-center gap-2 mt-4 p-4">
-    <a href="/buket/[slug].astro"><Button variant="secondary" size="large">LÆS MERE</Button></a>
-    <a href="/click_collect"><Button variant="tertiary" size="large">CLICK & COLLECT</Button></a>
+  <div class="flex flex-col bg-white overflow-hidden">
+    <div class="p-4 text-left">
+      <h2 class="mobile:text-base laptop:text-2xl text-black font-montserrat">{props.title}</h2>
+      <p class="mobile:text-sm laptop:text-base text-black mt-2 font-montserrat font-light">{props.description}</p>
+      <p class="mobile:text-sm laptop:text-bas font-bold text-black mt-3 font-montserrat">{props.price} DKK</p>
+    </div>
+
+    <!-- Her er ændringen -->
+    <div class="flex space-x-4 mt-4 p-0">
+      <a href="/buket/[slug].astro"><Button variant="secondary" size="medium">LÆS MERE</Button></a>
+      <a href="/click_collect"><Button variant="tertiary" size="medium">CLICK & COLLECT</Button></a>
+    </div>
   </div>
-</div>
 </article>

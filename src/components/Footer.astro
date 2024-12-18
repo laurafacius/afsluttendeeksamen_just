@@ -4,19 +4,19 @@ import Button from "../components/Button.astro";
 <footer class="bg-gray-900 text-white p-8 bg-darkgrey">
   <div class="px-6 grid grid-cols-1 laptop:grid-cols-5 gap-8">
 
-    <div class="col-span-2 flex items-center">
+    <div class="laptop:col-span-2 flex items-center mobile:grid grid-cols-1 gap-7">
       <img src="/justlogo.webp" alt="Blomsterbutikken Just" class="w-32">
 
       <div class="flex flex-col gap-2 pl-4">
-      <h3 class="font-montserrat font-bold text-xl">BLOMSTERBUTIKKEN JUST</h3>
-      <p class="font-shadowsintolight text-xl">Smukt, bæredygtigt og helt unikt</p>
+      <h3 class="font-montserrat font-bold mobile:text-base laptop:text-xl">BLOMSTERBUTIKKEN JUST</h3>
+      <p class="font-shadowsintolight mobile:text-base laptop:text-xl">Smukt, bæredygtigt og helt unikt</p>
       <p class="font-montserrat underline text-sm pt-3">Østrigsgade 53, 2300 København S</p>
     </div>
     </div>
 
     <div>
-      <h4 class="text-lg font-semibold mb-2 font-montserrat">Åbningstider</h4>
-      <ul class="text-sm space-y-2 font-montserrat">
+      <h4 class="mobile:text-sm laptop:text-lg font-semibold mb-2 font-montserrat">Åbningstider</h4>
+      <ul class="mobile:text-xs laptop:text-sm space-y-2 font-montserrat">
         <li>Mandag: 10:00 - 17:30</li>
         <li>Tirsdag: 10:00 - 17:30</li>
         <li>Onsdag: Lukket</li>
@@ -28,7 +28,7 @@ import Button from "../components/Button.astro";
     </div>
 
     <div>
-      <h4 class="text-lg font-semibold mb-2 font-montserrat">Kontakt</h4>
+      <h4 class="mobile:text-sm laptop:text-lg font-semibold mb-2 font-montserrat">Kontakt</h4>
 
       <div class="flex items-center space-x-3 pt-2">
       <img src="/phone.webp" alt="Telefon" class="w-6 h-6">
@@ -42,8 +42,8 @@ import Button from "../components/Button.astro";
     </div>
 
     <div>
-      <h4 class="text-lg font-semibold mb-2 font-montserrat">Click & Collect</h4>
-      <p class="text-sm font-montserrat pb-4">
+      <h4 class="mobile:text-sm laptop:text-lg font-semibold mb-2 font-montserrat">Click & Collect</h4>
+      <p class="mobile:text-xs laptop:text-sm font-montserrat pb-4">
         Bestil dine blomster nemt med Click & Collect! Vælg dine favoritter online, og afhent dem i butikken, når det passer dig.
       </p>
 
