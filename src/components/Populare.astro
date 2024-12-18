@@ -5,7 +5,7 @@ import Anbefaling from "../components/Anbefaling.astro";
 import Card from "../components/Card.astro";
 ---
 <h2 class="text-center text-wine font-lora mobile:text-3xl mobile:pt-8 laptop:text-5xl laptop:pt-10">Populære Buketter</h2>
-<section class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 p-4 mobile:p-6 tablet:p-8 laptop:p-16 laptop:pt-8 gap-6">
+<section class="grid grid-cols-1 mobile:grid-cols-2 laptop:grid-cols-4 p-4 mobile:p-6 tablet:p-8 laptop:p-16 laptop:pt-8 gap-6">
   <Card 
   title="Lys Luftig Buket (Høj)" 
   description="En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk." 
@@ -22,6 +22,13 @@ import Card from "../components/Card.astro";
   </Card>
 
   <Card 
+  title="Stor Farverig Buket (Lav)" 
+  description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
+  price="399">
+	<img src="/lavfarverigbuket.webp" alt="Buket billede">
+  </Card>
+
+   <Card 
   title="Stor Farverig Buket (Lav)" 
   description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
   price="399">
