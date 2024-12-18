@@ -1,0 +1,56 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import Button from "../../components/Button.astro";
+import { getBuketData, getAllBuketterSlugs } from "../../data/buketData.js";
+import Infografik from "../../components/Infografik.astro";
+import Populare from "../../components/Populare.astro";
+
+// Hent slug fra ruten
+const { slug } = Astro.params;
+
+// Hent buketdata baseret på slug
+const buket = getBuketData(slug);
+
+if (!buket) {
+  throw new Error(`Ingen buket fundet for slug: ${slug}`);
+}
+
+// Generér statiske ruter
+export async function getStaticPaths() {
+  const slugs = getAllBuketterSlugs();
+  return slugs.map(slug => ({
+    params: { slug }, // Slug bruges som parameter
+  }));
+}
+---
+
+<MainLayout title={buket.title}>
+  <section class="grid grid-cols-1 laptop:grid-cols-2 gap-8 p-8">
+    <img 
+      src={buket.image} 
+      alt={`Billede af ${buket.title}`} 
+      class="w-full max-w-md laptop:max-w-lg"
+    />
+
+      <div class="space-y-4">
+      <h2 class="font-bold mobile:text-4xl laptop:text-5xl font-montserrat mb-4 pt-16">{buket.title}</h2>
+      <p class="text-2xl font-bold text-black">{buket.price}  DKK</p>
+      <p class="mobile:text-lg laptop:text-xl font-montserrat pb-20 mt-4 mb-4">{buket.longDescription}</p>
+      <a href="/click_collect"><Button variant="primary" size="large">CLICK & COLLECT</Button></a>
+
+      <hr class="separator text-rose">
+
+      <h3 class="mobile:text-lg laptop:text-2xl font-montserrat">Sådan fungerer Click & Collect</h3>
+      <ol class="mobile:text-lg laptop:text-xl font-montserrat list-decimal">
+      <li><strong>Bestil online:</strong> Vælg din favoritbuket eller plante, og gennemfør din bestilling direkte på hjemmesiden.</li>
+      <br>
+      <li><strong>Afhent i butikken:</strong> Din ordre bliver gjort klar af vores florist og kan hentes samme dag eller på et tidspunkt, der passer dig bedst.</li>
+      <br>
+      <li>Vi sørger for, at dine blomster er klar til afhentning, så du hurtigt og nemt kan tage dem med hjem!</li>
+      </ol>
+    </div>
+  </section>
+
+<Infografik></Infografik>
+<Populare></Populare>
+</MainLayout>
