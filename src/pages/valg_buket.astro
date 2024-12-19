@@ -2,7 +2,7 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Anbefaling from "../components/Anbefaling.astro";
-import Card from "../components/Card.astro";
+import Card_click from "../components/Card_click.astro";
 ---
 
 <MainLayout title="Listview">
@@ -11,102 +11,109 @@ import Card from "../components/Card.astro";
     <p class="text-center mobile:text-base laptop:text-xl font-montserrat laptop:mx-52">Klik på den/de buketter herunder du ønsker at tilføje til din bestilling.</p>
 </section>
 
-<section class="grid grid-cols-2 tablet:grid-cols-2 laptop:grid-cols-3 p-4 mobile:p-6 tablet:p-8 laptop:p-16 gap-6">
-  <Card 
+<section class="grid grid-cols-2 tablet:grid-cols-2 laptop:grid-cols-3 p-4 mobile:p-6 tablet:p-8 laptop:p-20 gap-8">
+  <Card_click 
   title="Lys Luftig Buket (Høj)" 
   description="En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk." 
   price="349">	
     <img src="/lysluftigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Høj)" 
   description="En imponerende høj buket fyldt med farverige blomster, der lyser rummet op" 
   price="499">
 	<img src="/storfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Lav)" 
   description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
   price="399">
 	<img src="/lavfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-    <Card 
+    <Card_click 
   title="Lys Luftig Buket (Høj)" 
   description="En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk." 
   price="349">	
     <img src="/lysluftigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Høj)" 
   description="En imponerende høj buket fyldt med farverige blomster, der lyser rummet op" 
   price="499">
 	<img src="/storfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Lav)" 
   description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
   price="399">
 	<img src="/lavfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-    <Card 
+    <Card_click 
   title="Lys Luftig Buket (Høj)" 
   description="En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk." 
   price="349">	
     <img src="/lysluftigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Høj)" 
   description="En imponerende høj buket fyldt med farverige blomster, der lyser rummet op" 
   price="499">
 	<img src="/storfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Lav)" 
   description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
   price="399">
 	<img src="/lavfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-    <Card 
+    <Card_click 
   title="Lys Luftig Buket (Høj)" 
   description="En elegant og let buket i lyse farver, der skaber et luftigt og indbydende udtryk." 
   price="349">	
     <img src="/lysluftigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Høj)" 
   description="En imponerende høj buket fyldt med farverige blomster, der lyser rummet op" 
   price="499">
 	<img src="/storfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
 
-  <Card 
+  <Card_click 
   title="Stor Farverig Buket (Lav)" 
   description="En lav og bred buket med masser af farver, perfekt som blikfang på bordet." 
   price="399">
 	<img src="/lavfarverigbuket.webp" alt="Buket billede">
-  </Card>
+  </Card_click>
   </section>
 
-  <section class="pb-10">
+  <section class="mobile:pb-6">
     <hr class="mobile:mx-10 laptop:mx-20">
 <div class="flex flex-col items-end mobile:text-2xl laptop:text-3xl font-bold font-montserrat mobile:py-6 mobile:px-10 laptop:py-10 laptop:px-20">
     <p>I Alt: <span>398 DKK</span></p>
 </div>
     <hr class="mobile:mx-10 laptop:mx-20">
   </section>
-  <div class="mobile:pb-14 laptop:pb-10 flex flex-col laptop:items-end mobile:items-center laptop:px-20">   <a href="/oplysninger"><Button variant="primary" size="large">FORTSÆT TIL CHECKOUT</Button></a></div>
+     <div class="flex justify-between items-center mb-10 mobile:px-10 laptop:px-20">
+  <a href="/click_collect">
+    <img class="h-10" src="/tilbage.png" alt="tilbage pil">
+  </a>
+  <a href="/oplysninger">
+    <Button variant="primary" size="large">Til Checkout</Button>
+  </a>
+</div>
   </MainLayout>

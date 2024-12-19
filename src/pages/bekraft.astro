@@ -9,7 +9,7 @@ import Button from '../components/Button.astro';
     <p class="text-center mobile:text-base laptop:text-xl font-montserrat laptop:mx-52">Bekræft dine ordre og oplysninger er korrekte og gå derefter videre til betalingen</p>
 </section>
 
-<section class="w-full max-w-7-xl mobile:p-7 laptop:p-28">
+<section class="w-full max-w-7-xl mobile:p-7 laptop:px-28">
 
 <!-- Din Ordre -->
 <section>
@@ -58,7 +58,14 @@ import Button from '../components/Button.astro';
       <p class="text-base text-black mt-2 font-montserrat font-light pb-6">12 34 56 78</p>
 <hr>
  </section>
-  <div class="mobile:pb-14 laptop:pb-10 flex flex-col laptop:items-end mobile:items-center laptop:px-20">   <a href="/oplysninger"><Button variant="primary" size="large">BEKRÆFT OG GÅ TIL BETALING</Button></a></div>
+     <div class="flex justify-between items-center mb-10 mobile:px-7 laptop:px-28">
+  <a href="/oplysninger">
+    <img class="h-10" src="/tilbage.png" alt="tilbage pil">
+  </a>
+  <a href="/bekraft">
+    <Button variant="primary" size="large">Bekræft & Betal</Button>
+  </a>
+</div>
 
 
 

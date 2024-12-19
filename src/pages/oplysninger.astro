@@ -4,50 +4,59 @@ import Button from '../components/Button.astro';
 ---
 
 <MainLayout title="Indtast Oplysninger">
-  <section class="bg-rose text-white text-left relative w-full mobile:h-[300px] laptop:h-[400px] p-4 mobile:p-10 tablet:p-8 laptop:p-16 mobile:mb-10">
+  <section class="bg-rose text-white text-left relative w-full mobile:h-[300px] laptop:h-[400px] p-4 mobile:p-10 tablet:p-8 laptop:p-16">
     <h1 class="text-center font-bold mobile:text-4xl laptop:text-6xl font-montserrat mb-4 mobile:pt-2 laptop:pt-8">Indtast Oplysninger</h1>
     <p class="text-center mobile:text-base laptop:text-xl font-montserrat laptop:mx-52">Indtast dine oplysninger, samt vælg afhentningstidpunkt herunder</p>
   </section>
 
-  <div class="w-full h-screen flex justify-center items-center">
-
-    <div class="w-full max-w-4xl p-6">
+  <!-- Centering and adding max width -->
+  <div class="w-full flex justify-center px-4 laptop:px-28">
+    <div class="w-full max-w-7-xl p-6">
 
       <!-- Fornavn & Efternavn -->
-      <h3 class="text-xl laptop:2xl font-semibold mb-4 text-darkgrey">Navn:</h3>
+      <h3 class="text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Navn:</h3>
       <div class="grid grid-cols-2 gap-4 mb-6">
         <input type="text" placeholder="Fornavn" class="p-3 border bg-lightgray border-lightgray rounded-md w-full focus:outline-none focus:ring-2 focus:ring-winedark" required>
         <input type="text" placeholder="Efternavn" class="p-3 border bg-lightgray border-lightgray rounded-md w-full focus:outline-none focus:ring-2 focus:ring-winedark" required>
       </div>
 
       <!-- Email & tlf -->
-      <h3 class="text-xl laptop:2xl font-semibold mb-4 text-darkgrey">Email & Tlf:</h3>
+      <h3 class="text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Email & Tlf:</h3>
       <div class="grid grid-cols-2 gap-4 mb-6">
         <input type="email" placeholder="eksempel@eksempel.dk" class="p-3 border bg-lightgray border-lightgray rounded-md w-full focus:outline-none focus:ring-2 focus:ring-winedark" required>
         <input type="tel" placeholder="12 34 56 78" class="p-3 border bg-lightgray border-lightgray rounded-md w-full focus:outline-none focus:ring-2 focus:ring-winedark" required>
       </div>
 
       <!-- Dato & Tidspunkt -->
-      <h3 class="text-xl laptop:2xl font-semibold mb-4 text-darkgrey">Vælg Dato og Tidspunkt:</h3>
+      <h3 class="text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Vælg Dato og Tidspunkt:</h3>
       <div class="grid grid-cols-2 gap-4 mb-6">
         <input type="date" id="pickup-date" name="pickup-date" min="2024-12-01" max="2024-12-31" class="p-3 border bg-lightgray border-lightgray rounded-md w-full focus:outline-none focus:ring-2 focus:ring-winedark">
-        <div class="grid grid-cols-3 gap-4 w-full">
-          <button class="bg-darkgrey text-white p-3 focus:outline-none hover:bg-wine">11:00</button>
-          <button class="bg-darkgrey text-white p-3 focus:outline-none hover:bg-wine">11:00</button>
-          <button class="bg-darkgrey text-white p-3 focus:outline-none hover:bg-wine">11:00</button>
-          <button class="bg-darkgrey text-white p-3 focus:outline-none hover:bg-wine">11:00</button>
-          <button class="bg-darkgrey text-white p-3 focus:outline-none hover:bg-wine">11:00</button>
-          <button class="bg-darkgrey text-white p-3 focus:outline-none hover:bg-wine">11:00</button>
+        <div class="grid grid-cols-3 gap-2 w-full mobile:text-xs laptop:text-base">
+          <button class="bg-darkgrey text-white mobile:p-2 laptop:p-3 rounded-md focus:outline-none hover:bg-wine">11:00</button>
+          <button class="bg-darkgrey text-white mobile:p-2 laptop:p-3 rounded-md focus:outline-none hover:bg-wine">11:15</button>
+          <button class="bg-darkgrey text-white mobile:p-2 laptop:p-3 rounded-md focus:outline-none hover:bg-wine">12:00</button>
+          <button class="bg-darkgrey text-white mobile:p-2 laptop:p-3 rounded-md focus:outline-none hover:bg-wine">12:30</button>
+          <button class="bg-darkgrey text-white mobile:p-2 laptop:p-3 rounded-md focus:outline-none hover:bg-wine">13:00</button>
+          <button class="bg-darkgrey text-white mobile:p-2 laptop:p-3 rounded-md focus:outline-none hover:bg-wine">13:15</button>
         </div>
       </div>
 
       <!-- Ekstra Kommentar -->
-      <h3 class="text-xl laptop:2xl font-semibold mb-4 text-darkgrey">Tilføj kommentar til din ordre:</h3>
+      <h3 class="text-xl laptop:text-2xl font-semibold mb-4 text-darkgrey">Tilføj kommentar til din ordre:</h3>
       <textarea placeholder="Tilføj en ekstra kommentar på din ordre..." class="p-3 border bg-lightgray border-lightgray rounded-md w-full h-32 focus:outline-none focus:ring-2 focus:ring-winedark mb-6"></textarea>
- 
+
       <hr class="pb-5">
       <!-- Submit Button -->
-       
-    <div class="flex flex-col laptop:items-end mobile:items-center laptop:px-0 mb-20">   <a href="/bekraft"><Button variant="primary" size="large">FORTSÆT TIL CHECKOUT</Button></a></div></div>
+     <div class="flex justify-between items-center mb-10">
+  <a href="/valg_buket">
+    <img class="h-10" src="/tilbage.png" alt="tilbage pil">
+  </a>
+  <a href="/bekraft">
+    <Button variant="primary" size="large">Bekræft & Gå til Betaling</Button>
+  </a>
+</div>
+    </div>
   </div>
 </MainLayout>
+
+

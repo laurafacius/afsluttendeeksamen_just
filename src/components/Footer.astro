@@ -4,13 +4,16 @@ import Button from "../components/Button.astro";
 <footer class="bg-gray-900 text-white p-8 bg-darkgrey">
   <div class="px-6 grid grid-cols-1 laptop:grid-cols-5 gap-8">
 
+    
     <div class="laptop:col-span-2 flex items-center mobile:grid grid-cols-1 gap-7">
       <img src="/justlogo.webp" alt="Blomsterbutikken Just" class="w-32">
 
       <div class="flex flex-col gap-2 pl-4">
       <h3 class="font-montserrat font-bold mobile:text-base laptop:text-xl">BLOMSTERBUTIKKEN JUST</h3>
       <p class="font-shadowsintolight mobile:text-base laptop:text-xl">Smukt, bæredygtigt og helt unikt</p>
-      <p class="font-montserrat underline text-sm pt-3">Østrigsgade 53, 2300 København S</p>
+      <a href="https://www.google.com/maps?q=Østrigsgade+53,+2300+København+S" target="_blank">
+  <p class="font-montserrat underline text-sm pt-3">Østrigsgade 53, 2300 København S</p>
+</a>
     </div>
     </div>
 
@@ -31,13 +34,21 @@ import Button from "../components/Button.astro";
       <h4 class="mobile:text-sm laptop:text-lg font-semibold mb-2 font-montserrat">Kontakt</h4>
 
       <div class="flex items-center space-x-3 pt-2">
-      <img src="/phone.webp" alt="Telefon" class="w-6 h-6">
-      <p class="text-sm font-montserrat">31 26 70 05</p>
+   <a href="tel:+4531267005">
+    <img src="/phone.webp" alt="Telefon" class="w-6 h-6">
+  </a>
+  <a href="tel:+4531267005">
+    <p class="text-sm font-montserrat">31 26 70 05</p>
+  </a>
       </div>
 
       <div class="flex items-center space-x-3 pt-3">
-      <img src="/email.webp" alt="Email" class="w-6 h-6">
-      <p class="text-sm font-montserrat">just@blomsterkbh.dk</p>
+   <a href="mailto:just@blomsterkbh.dk">
+    <img src="/email.webp" alt="Email" class="w-6 h-6">
+  </a>
+  <a href="mailto:just@blomsterkbh.dk">
+    <p class="text-sm font-montserrat">just@blomsterkbh.dk</p>
+  </a>
       </div>
     </div>
 
