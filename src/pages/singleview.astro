@@ -1,0 +1,42 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/Button.astro";
+import Infografik from "../components/Infografik.astro";
+import Populare from "../components/Populare.astro";
+
+---
+
+<MainLayout title=Singleview>
+ <section class="grid grid-cols-1 laptop:grid-cols-2 mobile:px-6 tablet:px-8 laptop:px-16 mobile:py-6">
+    <img 
+      src=/single.png 
+      alt=buket 
+      class="w-full max-w-md laptop:max-w-lg"
+    />
+
+      <div class="space-y-4">
+      <h1 class="font-bold mobile:text-4xl laptop:text-4xl font-montserrat mb-4 mobile:pt-3 laptop:pt-16">Lys Lufftig Buket (Høj)</h1>
+      <p class="mobile:text-lg laptop:text-2xl font-bold text-black">349 DKK</p>
+      <p class="mobile:text-sm laptop:text-base font-montserrat pb-6 mt-4 mb-4">En elegant og let buket i smukke lyse farver, der bringer et luftigt og indbydende udtryk til ethvert rum.
+<br>
+Blomsterne udvælges nøje af vores dygtige florist og afhænger af udvalget i butikken på dagen, hvilket gør hver buket unik.
+<br>
+Perfekt til dig, der ønsker et enkelt og stilrent look, men stadig en frisk og levende buket, der passer til både hjemmet og særlige anledninger.</p>
+      <a href="/click_collect"><Button variant="primary" size="large">Click & Collect</Button></a>
+
+      <hr class="separator text-rose">
+
+      <h3 class="mobile:text-xl laptop:text-2xl font-montserrat">Sådan fungerer Click & Collect</h3>
+      <ol class="mobile:text-xs laptop:text-sm font-montserrat list-decimal pb-10">
+      <li><strong>Bestil online:</strong> Vælg din favoritbuket eller plante, og gennemfør din bestilling direkte på hjemmesiden.</li>
+      <br>
+      <li><strong>Afhent i butikken:</strong> Din ordre bliver gjort klar af vores florist og kan hentes samme dag eller på et tidspunkt, der passer dig bedst.</li>
+      <br>
+      <li>Vi sørger for, at dine blomster er klar til afhentning, så du hurtigt og nemt kan tage dem med hjem!</li>
+      </ol>
+    </div>
+  </section>
+
+<Infografik></Infografik>
+<Populare></Populare>
+</MainLayout>
